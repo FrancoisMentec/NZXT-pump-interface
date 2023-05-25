@@ -1,0 +1,15 @@
+header
+  title NZXT pump interface 
+  link(rel='stylesheet', href='/css/style.css')
+body 
+  div#outer_ring
+  svg#svg(width='640', height='640')
+    path#cpu_bar
+    path#gpu_bar
+  div#cpu_wrap
+    div#cpu_temp 99
+    div#cpu_label CPU
+  div#gpu_wrap
+    div#gpu_temp 99
+    div#gpu_label GPU
+  script(type='module', src='/js/main.js')

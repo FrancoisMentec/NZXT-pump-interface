@@ -1,0 +1,104 @@
+:root {
+    --cpu_color: #d9ad5b;
+    --gpu_color: #593a1e;
+}
+
+@font-face {
+    font-family: 'roboto_thin';
+    src: url('/fonts/roboto/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'roboto_bold';
+    src: url('/fonts/roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'roboto_black';
+    src: url('/fonts/roboto/Roboto-Black.ttf');
+}
+
+html, body {
+    position: relative;
+    width: 640px;
+    height: 640px;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
+    background-image: url('/img/benjamin.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#outer_ring {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 40px solid rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
+}
+
+#svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#cpu_bar, #gpu_bar {
+    fill: transparent;
+    stroke-width: 15px;
+    stroke-linecap: round;
+}
+
+#cpu_bar {
+    stroke: var(--cpu_color);
+}
+
+#gpu_bar {
+    stroke: var(--gpu_color);
+}
+
+#cpu_wrap, #gpu_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    font-family: roboto_bold;
+    color: white;
+}
+
+#cpu_wrap {
+    left: 30%;
+    color: var(--cpu_color);
+    transform: translateX(-50%);
+}
+
+#gpu_wrap {
+    right: 30%;
+    color: var(--gpu_color);
+    transform: translateX(50%);
+}
+
+#cpu_temp, #gpu_temp {
+    position: relative;
+    font-size: 120px;
+}
+
+#cpu_temp::after, #gpu_temp::after {
+    content: '°';
+    font-size: 80px;
+    vertical-align: top;
+    position: absolute;
+    top: 5px;
+}
+
+#cpu_label, #gpu_label {
+    position: relative;
+    top: -20px;
+    font-size: 60px;
+}
