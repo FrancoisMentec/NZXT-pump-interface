@@ -4,12 +4,21 @@ header
 body 
   div#outer_ring
   svg#svg(width='640', height='640')
+    // CPU ---
     path#cpu_bar
+    path#cpu_label_path
+    text
+      textPath#cpu_label(href='#cpu_label_path', startOffset='50%', text-anchor='middle') CPU
+    // GPU ---
     path#gpu_bar
-  div#cpu_wrap
-    div#cpu_temp 99
-    div#cpu_label CPU
-  div#gpu_wrap
-    div#gpu_temp 99
-    div#gpu_label GPU
+    path#gpu_label_path
+    text
+      textPath#gpu_label(href='#gpu_label_path', startOffset='50%', text-anchor='middle') GPU
+    // Date
+    path#date_path
+    //text
+      textPath#date(href='#date_path', startOffset='50%', text-anchor='middle')
+  div#cpu_temp 99
+  div#gpu_temp 99
+  div#date
   script(type='module', src='/js/main.js')
