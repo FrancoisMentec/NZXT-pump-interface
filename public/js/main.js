@@ -45,7 +45,7 @@ window.nzxt = {
 }
 
 function update_cpu (temp) {
-    cpu_temp.innerText = Math.round(temp) + '°'
+    cpu_temp.innerText = Math.round(temp)// + '°'
 
     const perpi = temp / CPU_MAX_TEMP * Math.PI / 2
     const x = RING_BORDER / 2 + RING_RADIUS * (1 - Math.cos(perpi))
@@ -55,7 +55,7 @@ function update_cpu (temp) {
 }
 
 function update_gpu (temp) {
-    gpu_temp.innerText = Math.round(temp) + '°'
+    gpu_temp.innerText = Math.round(temp)// + '°'
 
     const perpi = temp / GPU_MAX_TEMP * Math.PI / 2
     const x = VIEWSTATE / 2 + RING_RADIUS * Math.cos(perpi)
