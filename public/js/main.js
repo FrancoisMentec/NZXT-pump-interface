@@ -69,7 +69,7 @@ update_gpu(50)*/
 
 function update_date () {
     const now = new Date()
-    date_div.innerHTML = `${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`
+    date_div.innerHTML = `${now.getDate()} ${MONTHS[now.getMonth()]}` // ${now.getFullYear()}`
     const tomorrow = new Date()
     tomorrow.setHours(24, 0, 0, 0)
     setTimeout(update_date, tomorrow - now)
